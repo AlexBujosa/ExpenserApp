@@ -13,11 +13,11 @@ function rtnMonthArrExpense(expenseArr, filterByYear){
     var saveMonth = [];
     var saveIndex = [];
     var index = 0;
-    expenseTotal = 0
+    expenseTotal = 0;
     for(let i = 0; i<newExpenseArr.length; i++){
         var date = new Date(newExpenseArr[i].Date);
         var year =date.getFullYear();
-        var expense = newExpenseArr[i].Expense;
+        var expense = parseInt(newExpenseArr[i].Expense);
         if(filterByYear === year){
             if(arrMonthExpense.length > 0){
                 var indexMonth = saveMonth.indexOf(date.getMonth());
