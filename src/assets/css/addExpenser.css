@@ -1,0 +1,100 @@
+.btn-expense{
+    border:none;
+    color:white;
+    background-color: rgb(81, 12, 102);
+    justify-content: center;
+    margin:10px auto;
+    border-radius:6px;
+    width:22%;
+    height:40px;
+}
+.btn-expense:hover{
+    cursor:pointer;
+}
+.AddNewButton{
+    background-color: rgb(166, 134, 249);
+    border-radius: 7px;
+    display:flex;
+    width:70%;
+    margin:auto auto 20px auto;
+}
+.upper-side{
+    width:98%;
+    height:80%;
+    display:flex;
+}
+.bottom-side{
+    width:98%;
+    height:20%;
+    display:flex;
+}
+.bottom-side input{
+    margin-right:10px;
+    height: 40px;
+}
+.submit{
+    width:125px;
+    background-color: rgb(81, 12, 102);
+    color:white;
+    border-style:none;
+    border-radius: 7px;
+    margin-left:10px;
+}
+.submit:hover{
+    cursor:pointer;
+}
+.cancel{
+    background-color: rgb(166, 134, 249);
+    border-style:none;
+    font-style:bold;
+    margin-right:0px;
+    margin-left:auto;
+    height:40px;
+    width:50px;
+}
+.cancel:hover{
+    cursor:pointer;
+}
+.left-side{
+    width:45%;
+    height:100%;
+    margin-right:15px;
+}
+.left-side label{
+    font-style:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.right-side{
+    width:55%;
+    height:100%;
+}
+.right-side label{
+    font-style:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    width:98%;
+    margin:10px 10px;
+}
+.fTitle{
+    margin-right:2px;
+    width:98%;
+    height:25px;
+    border-radius:6px;
+    border:1px;
+    margin-bottom:10px;
+
+}
+.fAmount{
+    width:80%;
+    height:25px;
+    border-radius:6px;
+    border:1px;
+    margin-bottom:10px;
+}
+.fDate{
+    height:30px;
+    border-radius:6px;
+    border:1px;
+    width:99%;
+}

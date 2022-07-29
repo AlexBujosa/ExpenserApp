@@ -1,0 +1,22 @@
+.progress{
+    width:10px;
+    margin-left:6%;
+    margin-bottom:20px;
+    margin-top:auto;
+    top:100px;
+    height:70%;
+    border-radius:10px;
+    background:#5f45c0;
+    color:black;
+    display:block;
+}
+.progressing{
+    width:100%;
+    height:100%;
+    background:#a288ff;
+    border-radius: 30px;
+}
+.progress p{
+    margin-top:0px;
+    font-size:small;
+}

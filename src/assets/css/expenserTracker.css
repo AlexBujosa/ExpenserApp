@@ -1,0 +1,87 @@
+.Body-FilterItem{
+    border-radius: 7px;
+    width:70%;
+    margin:auto;
+    justify-content: center;
+    background-color:rgb(33, 32, 32);
+    color:white;
+    padding-bottom:10px;
+}
+.FilterTitle{
+    width:96%;
+    display:flex;;
+    margin:0px 2%;
+    
+}
+.div-select{
+    padding:16px 0px;
+    margin-right:0;
+    margin-left:auto;
+}
+.FilterByYear{
+    padding:8px 0px;
+    font-style:inherit;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.customer-select{
+    width:120px;
+    height: 35px;
+    border-radius:2px;
+}
+
+
+.Porcentage-Year{
+    height:125px;
+    border-radius:7px;
+    background-color:rgb(252, 203, 245);
+    width:98%;
+    display:flex;
+    margin:0px 1%;
+
+}
+
+.item-product{
+    height:90px;
+    border-radius:7px;
+    background-color:rgb(77, 77, 77);
+    width:98%;
+    display:flex;
+    margin:10px 1%;
+}
+.date{
+    margin:10px;
+    width:80px;
+    border-radius:7px;
+    background-color:rgb(33, 32, 32);
+    border-style:solid;
+    border-width: thin 1px;
+    border-color:rgb(191, 180, 180);
+
+}
+.name-product{
+    margin:10px;
+    text-align:center;
+    padding:22px 0px;
+}
+.price-in{
+    margin:10px 10px 10px auto;
+    text-align:center;
+    padding:22px 0px;
+    float:right;
+}
+.month{
+    text-align: center;
+    margin-top:2px;
+    margin-bottom: 0px;
+}
+.year{
+    margin-top:1px;
+    text-align:center;
+    font-size:x-small;
+    margin-bottom:0px;
+}
+.day{
+    margin-top:6px;
+    text-align:center;
+    font-size: large;
+}
