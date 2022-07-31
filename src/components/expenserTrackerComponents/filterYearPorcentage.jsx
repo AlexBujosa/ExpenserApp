@@ -7,6 +7,7 @@ const month = [ "Jan", "Feb", "Mar",
                 "Apr", "May", "Jun",
                 "Jul", "Ago", "Sep",
                 "Oct", "Nov", "Dec"];
+                
 function rtnMonthArrExpense(expenseArr, filterByYear){
     var newExpenseArr = [...expenseArr];
     var arrMonthExpense = [];
@@ -39,6 +40,7 @@ function rtnMonthArrExpense(expenseArr, filterByYear){
     }
     return arrMonthExpense;
 }
+
 function reset(){
     for(let i = 0; i< month.length;i++){
         var id = month[i];
@@ -46,6 +48,7 @@ function reset(){
         element.style="Height: 100%;"
     }
 }
+
 function changePorcentage(arrMonthExpense){
     reset();
     for(let i = 0;i<arrMonthExpense.length;i++){
@@ -55,6 +58,7 @@ function changePorcentage(arrMonthExpense){
         element.style="Height: "+ (100 - num).toString()+ "%;";
     }
 }
+
 export function FilterYearPorcentage({value, filterByYear}){
     expenseTotal = 0;
     var arrMonthExpense = rtnMonthArrExpense(value,filterByYear);
@@ -72,18 +76,22 @@ export function FilterYearPorcentage({value, filterByYear}){
     return(
         <Fragment>
             <div className="Porcentage-Year">
-                <PorcentageMonth value="Jan" id="Jan"/>
-                <PorcentageMonth value="Feb" id="Feb"/>
-                <PorcentageMonth value="Mar" id="Mar"/>
-                <PorcentageMonth value="Apr" id="Apr"/>
-                <PorcentageMonth value="May" id="May"/>
-                <PorcentageMonth value="Jun" id="Jun"/>
-                <PorcentageMonth value="Jul" id="Jul"/>
-                <PorcentageMonth value="Ago" id="Ago"/>
-                <PorcentageMonth value="Sep" id="Sep"/>
-                <PorcentageMonth value="Oct" id="Oct"/>
-                <PorcentageMonth value="Nov" id="Nov"/>
-                <PorcentageMonth value="Dec" id="Dec"/>
+                <div className="Porcentage-Month">
+                    <PorcentageMonth value="Jan" id="Jan"/>
+                    <PorcentageMonth value="Feb" id="Feb"/>
+                    <PorcentageMonth value="Mar" id="Mar"/>
+                    <PorcentageMonth value="Apr" id="Apr"/>
+                    <PorcentageMonth value="May" id="May"/>
+                    <PorcentageMonth value="Jun" id="Jun"/>
+                    <PorcentageMonth value="Jul" id="Jul"/>
+                    <PorcentageMonth value="Ago" id="Ago"/>
+                    <PorcentageMonth value="Sep" id="Sep"/>
+                    <PorcentageMonth value="Oct" id="Oct"/>
+                    <PorcentageMonth value="Nov" id="Nov"/>
+                    <PorcentageMonth value="Dec" id="Dec"/>
+                </div>
+               
+                
         </div>
         {isTrue === true  && resetAll()}
         </Fragment>

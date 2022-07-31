@@ -35,10 +35,14 @@
     border-radius:7px;
     background-color:rgb(252, 203, 245);
     width:98%;
-    display:flex;
     margin:0px 1%;
 
 }
+.Porcentage-Month{
+    display:flex;
+    height:90%;
+}
+
 
 .item-product{
     height:90px;

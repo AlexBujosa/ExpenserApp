@@ -4,20 +4,11 @@ import { ExpenserTracker } from './components/expenserTracker';
 
 function rtnYears(dateStr, years){
     var oldYear = [...years];
-    var yearArr = [];
-    var count = 0;
     var decodeDate = new Date(dateStr);
     var year = decodeDate.getFullYear();
     if(oldYear.includes(year)) return years;
-    for(let i = 0; i<years.length; i++){
-        if(count === 0 && years[i] < year){
-            yearArr.push(year);
-            count++;
-        }
-        yearArr.push(years[i]);
-    }
-    if(count === 0)  yearArr.push(year);
-    return yearArr;
+    oldYear.push(year);
+    return oldYear.sort().reverse();
 }
 
 export function App(){
@@ -28,7 +19,7 @@ export function App(){
         {Title: "Toilet Paper", Date: "2020-08-14", Expense: 94.12},
         {Title: "Iphone X", Date:"2019-02-13", Expense: 200.15}
     ]);
-    const[filterByYear, SetFilterByYear] = useState([2022, 2021, 2020,2019])
+    const[filterByYear, SetFilterByYear] = useState([2022, 2021, 2020,2019, 2017])
     const OnSubmit = (event)=>{
         event.preventDefault();
         var title = event.target.fTitle.value;

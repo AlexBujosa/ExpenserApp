@@ -9,6 +9,7 @@
     background:#5f45c0;
     color:black;
     display:block;
+    
 }
 .progressing{
     width:100%;
@@ -17,6 +18,12 @@
     border-radius: 30px;
 }
 .progress p{
-    margin-top:0px;
+    position:absolute;
     font-size:small;
+    margin-bottom:0px;
+    margin-top:auto;
+}
+
+.p-progress{
+    display:flex;
 }
