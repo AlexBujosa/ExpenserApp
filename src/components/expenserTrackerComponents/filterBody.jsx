@@ -7,32 +7,20 @@ function generateNewUnique(){
     return small_id;
 }
 
-
-function rtnYearArrExpense(expenseArr, filterByYear){
+export function FilterBody({value, filterByYear}){
     const Month = ["January", "February", "March",
                     "April", "May", "June", "July",
                     "August", "September", "November", "December"];
-    var newExpenseArr = [...expenseArr];
-    var arrYearExpense = [];
-    for(let i = 0; i<newExpenseArr.length; i++){
-        var date = new Date(newExpenseArr[i].Date);
-        var year =date.getFullYear();
-        var month = date.getMonth();
-        var day = date.getDay();
-        var monthStr = Month[month];
-        if(filterByYear === year){
-            arrYearExpense.push({Year: year, Month: monthStr, Day: day, Title:newExpenseArr[i].Title, Expense: newExpenseArr[i].Expense})
-        }
-    }
-    return arrYearExpense;
-}
-export function FilterBody({value, filterByYear}){
-    var arrYearExpense = rtnYearArrExpense(value, filterByYear);
+    const filteredYear = value.filter(expense => {
+        return new Date(expense.Date).getFullYear() === filterByYear;
+    })
     return(
         <div className="Filter-Body">
-            {arrYearExpense.map((item)=>(
-                <ExpenserProduct value={item.Month+ ""+ item.Expense+""+generateNewUnique()}year={item.Year} month = {item.Month} day ={item.Day} title ={item.Title} expense={item.Expense}/>
-            ))}
+            <div>
+                {filteredYear.map((item)=>(
+                     <ExpenserProduct value={item.Month+ ""+ item.Expense+""+generateNewUnique()}year={new Date(item.Date).getFullYear()} month = {Month[new Date(item.Date).getMonth()]} day ={new Date(item.Date).getDate()+ 1} title ={item.Title} expense={item.Expense}/>
+                ))}
+            </div>
         </div>
     )
 }

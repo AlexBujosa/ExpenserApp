@@ -13,8 +13,8 @@ function rtnYears(dateStr, years){
 
 export function App(){
     const[productStorage, SetProductStorage] = useState([
-        {Title: "New TV", Date: "2021-03-12", Expense: 799.49},
-        {Title: "Car Insurance", Date: "2021-03-28", Expense: 294.67},
+        {Title: "New TV", Date: "2021-03-04", Expense: 799.49},
+        {Title: "Car Insurance", Date: "2021-03-08", Expense: 294.67},
         {Title: "New Desk (Wooden)", Date: "2021-06-12", Expense: 450},
         {Title: "Toilet Paper", Date: "2020-08-14", Expense: 94.12},
         {Title: "Iphone X", Date:"2019-02-13", Expense: 200.15}
@@ -26,6 +26,7 @@ export function App(){
         var date = event.target.fDate.value;
         var expense = event.target.fAmount.value;
         var newProduct = {Title:title, Date: date, Expense: expense}
+        alert(date);
         SetProductStorage((oldProduct)=>{
             return [...oldProduct, newProduct]
         })
